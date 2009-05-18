@@ -7,7 +7,7 @@ Group:		Sciences/Mathematics
 License:	GPL
 Summary:	GMP ECM - Elliptic Curve Method for Integer Factorization
 Version:	6.2.1
-Release:	%mkrel 2
+Release:	%mkrel 3
 Source:		http://gforge.inria.fr/frs/download.php/4837/ecm-6.2.1.tar.gz
 URL:		http://gforge.inria.fr/projects/ecm/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
