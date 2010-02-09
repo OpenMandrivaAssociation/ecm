@@ -6,13 +6,16 @@ Name:		%{name}
 Group:		Sciences/Mathematics
 License:	GPL
 Summary:	GMP ECM - Elliptic Curve Method for Integer Factorization
-Version:	6.2.1
-Release:	%mkrel 3
-Source:		http://gforge.inria.fr/frs/download.php/4837/ecm-6.2.1.tar.gz
+Version:	6.3
+Release:	%mkrel -c 1434 1
+Source:		http://gforge.inria.fr/frs/download.php/4837/ecm-6.3-r1434.tar.xz
+Patch0:		ecm-6.3-fix-build.patch
+Patch1:		ecm-6.3-install.patch
 URL:		http://gforge.inria.fr/projects/ecm/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 BuildRequires:	libgmp-devel
+BuildRequires:	xsltproc docbook-style-xsl
 
 %description
 GMP ECM - Elliptic Curve Method for Integer Factorization.
@@ -39,11 +42,12 @@ libraries.
 
 %prep
 %setup -q
+%patch0 -p0
+%patch1 -p0
 
 %build
-# tarball uses an older libtool
-autoreconf
-%configure			\
+autoreconf -fi
+%configure2_5x			\
 	--enable-shared		\
 	--disable-static	\
 %ifarch %{ix86}
@@ -57,6 +61,7 @@ autoreconf
 %make
 
 %install
+rm -rf %{buildroot}
 %makeinstall_std
 
 %clean
