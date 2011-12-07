@@ -7,7 +7,7 @@ Group:		Sciences/Mathematics
 License:	GPL
 Summary:	GMP ECM - Elliptic Curve Method for Integer Factorization
 Version:	6.3
-Release:	%mkrel -c 1434 2
+Release:	%mkrel -c 1434 3
 Source:		http://gforge.inria.fr/frs/download.php/4837/ecm-6.3-r1434.tar.xz
 Patch0:		ecm-6.3-fix-build.patch
 Patch1:		ecm-6.3-install.patch
@@ -63,6 +63,7 @@ autoreconf -fi
 %install
 rm -rf %{buildroot}
 %makeinstall_std
+rm %{buildroot}%{_libdir}/libecm.la
 
 %clean
 rm -rf %{buildroot}
@@ -81,5 +82,4 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_includedir}/ecm.h
 %{_libdir}/libecm.so
-%{_libdir}/libecm.la
 %doc AUTHORS README.lib TODO
