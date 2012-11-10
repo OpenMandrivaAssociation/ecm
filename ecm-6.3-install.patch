@@ -1,0 +1,11 @@
+--- Makefile.am.install	2010-02-09 09:37:26.000000000 +0100
++++ Makefile.am	2010-02-09 09:39:01.000000000 +0100
+@@ -103,8 +103,6 @@
+ 
+ ## to be sure ecm.1 is considered as source
+ ## (cf section "Man pages" in the automake manual)
+-dist_man_MANS = ecm.1
+-
+ man_MANS =
+ if MAKE_MANPAGE
+   man_MANS += ecm.1
