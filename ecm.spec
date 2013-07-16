@@ -11,6 +11,7 @@ Source0:        https://gforge.inria.fr/frs/download.php/32159/ecm-%{version}.ta
 Source1:	%{name}.rpmlintrc
 BuildRequires:	docbook-style-xsl
 BuildRequires:	gmp-devel
+BuildRequires:	gomp-devel
 BuildRequires:  gsl-devel
 BuildRequires:	xsltproc
 BuildRequires:  m4
