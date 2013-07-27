@@ -3,7 +3,7 @@
 
 Name:           ecm
 Version:        6.4.4
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Elliptic Curve Method for Integer Factorization
 License:        GPLv3+
 URL:            https://gforge.inria.fr/projects/ecm/
@@ -25,6 +25,7 @@ integers (with GMP for arbitrary precision integers).
 %package	devel
 License:	LGPL
 Summary:	Shared GMP ECM library
+Requires:	%{name}-libs%{?_isa} = %{version}-%{release}
 %rename %{old_devname}
 
 %description    devel
