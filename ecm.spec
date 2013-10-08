@@ -3,7 +3,7 @@
 
 Name:           ecm
 Version:        6.4.4
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Elliptic Curve Method for Integer Factorization
 License:        GPLv3+
 URL:            https://gforge.inria.fr/projects/ecm/
