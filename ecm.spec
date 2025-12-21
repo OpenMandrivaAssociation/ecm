@@ -9,6 +9,11 @@ License:        GPLv3+
 URL:            https://gforge.inria.fr/projects/ecm/
 Source0:        https://gforge.inria.fr/frs/download.php/32159/ecm-%{version}.tar.gz
 Source1:	%{name}.rpmlintrc
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	docbook-style-xsl
 BuildRequires:	gmp-devel
 BuildRequires:	gomp-devel
